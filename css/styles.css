@@ -323,9 +323,9 @@ img {
 /* Hero Section (Using hero img2.png) */
 .hero {
   position: relative;
-  min-height: 84vh;
-  padding-top: calc(var(--nav-height) + 30px);
-  padding-bottom: 60px;
+  min-height: 88vh;
+  padding-top: calc(var(--nav-height) + 40px);
+  padding-bottom: 70px;
   display: flex;
   align-items: center;
   background-color: var(--bg-light-main);
@@ -333,37 +333,38 @@ img {
   overflow: hidden;
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 40px;
-  align-items: center;
+/* Full-Width Right Background Image Layer */
+.hero-full-bg-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-full-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+  mask-image: linear-gradient(to right, transparent 0%, #000 25%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 25%);
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #FDFBF7 0%, rgba(253, 251, 247, 0.4) 35%, transparent 100%);
+  pointer-events: none;
 }
 
 .hero-content-wrapper {
   position: relative;
-  z-index: 2;
-  max-width: 720px;
-}
-
-.hero-media-wrapper {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-}
-
-.hero-img {
-  width: 100%;
-  max-width: 580px;
-  height: auto;
-  max-height: 520px;
-  object-fit: contain;
-  filter: drop-shadow(0 16px 36px rgba(15, 23, 42, 0.08));
-  transition: transform 0.3s ease;
+  z-index: 5;
+  max-width: 660px;
 }
 
 .hero-top-tag {
@@ -1382,18 +1383,9 @@ body.menu-open {
     background-color: var(--bg-light-main);
   }
 
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .hero-media-wrapper {
-    justify-content: center;
-  }
-
-  .hero-img {
-    max-width: 440px;
-    max-height: 360px;
+  .hero-full-bg-wrap {
+    width: 100%;
+    opacity: 0.25;
   }
 
   .hero-top-right-note {
