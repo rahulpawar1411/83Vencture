@@ -148,12 +148,8 @@ img {
 }
 
 .btn svg {
-  transition: transform 0.35s cubic-bezier(0.76, 0, 0.24, 1);
   flex-shrink: 0;
-}
-
-.btn:hover svg {
-  transform: translateX(4px);
+  vertical-align: middle;
 }
 
 .btn-navy {
