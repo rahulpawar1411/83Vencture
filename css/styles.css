@@ -404,52 +404,77 @@ img {
   background: #FFFFFF;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
   position: relative;
   z-index: 10;
+  padding: 6px 0;
 }
 
 .pillars-bar-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
 }
 
 .pillar-item {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 26px 20px;
-  border-right: 1px solid var(--border-light);
-  transition: background 0.2s ease;
-}
-
-.pillar-item:last-child {
-  border-right: none;
+  gap: 16px;
+  padding: 22px 20px;
+  background: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
 .pillar-item:hover {
   background: #F8FAFC;
+  transform: translateY(-2px);
+  z-index: 2;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
 .pillar-icon {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  border-radius: 50%;
-  background: rgba(197, 155, 39, 0.08);
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(12, 30, 35, 0.04) 0%, rgba(197, 155, 39, 0.14) 100%);
   border: 1px solid rgba(197, 155, 39, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gold-hover);
-  font-size: 1.1rem;
+  color: var(--gold-primary);
+  transition: all 0.3s ease;
+}
+
+.pillar-item:hover .pillar-icon {
+  background: var(--navy-btn);
+  color: var(--gold-light);
+  border-color: var(--navy-btn);
+  transform: scale(1.05);
+}
+
+.pillar-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .pillar-title {
   font-family: var(--font-heading);
-  font-size: 0.98rem;
+  font-size: 0.96rem;
   font-weight: 700;
   color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.pillar-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-subtle);
+  font-weight: 500;
+  margin-top: 2px;
 }
 
 /* Portfolio Section (design2.png Split Layout) */
