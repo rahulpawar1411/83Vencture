@@ -399,24 +399,19 @@ img {
   background: rgba(15, 23, 42, 0.4);
 }
 
-/* 4 Strategic Pillars Bar */
+/* 4 Strategic Pillars Bar (Serious Corporate & Static) */
 .pillars-bar-section {
   background: #FFFFFF;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
   position: relative;
   z-index: 10;
-  padding: 6px 0;
+  padding: 4px 0;
 }
 
 .pillars-bar-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--border-light);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
 }
 
 .pillar-item {
@@ -425,36 +420,24 @@ img {
   gap: 16px;
   padding: 22px 20px;
   background: #FFFFFF;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
+  border-right: 1px solid var(--border-light);
 }
 
-.pillar-item:hover {
-  background: #F8FAFC;
-  transform: translateY(-2px);
-  z-index: 2;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+.pillar-item:last-child {
+  border-right: none;
 }
 
 .pillar-icon {
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(12, 30, 35, 0.04) 0%, rgba(197, 155, 39, 0.14) 100%);
-  border: 1px solid rgba(197, 155, 39, 0.3);
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
+  background: #F1F5F9;
+  border: 1px solid rgba(15, 23, 42, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gold-primary);
-  transition: all 0.3s ease;
-}
-
-.pillar-item:hover .pillar-icon {
-  background: var(--navy-btn);
-  color: var(--gold-light);
-  border-color: var(--navy-btn);
-  transform: scale(1.05);
+  color: #0F172A;
 }
 
 .pillar-content {
@@ -464,15 +447,15 @@ img {
 
 .pillar-title {
   font-family: var(--font-heading);
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: #0F172A;
   line-height: 1.3;
 }
 
 .pillar-subtitle {
   font-size: 0.78rem;
-  color: var(--text-subtle);
+  color: #64748B;
   font-weight: 500;
   margin-top: 2px;
 }
