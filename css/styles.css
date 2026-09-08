@@ -738,46 +738,49 @@ img {
   background: #FFFFFF;
   border-radius: 16px;
   padding: 24px;
-  border: 1px solid var(--border-light);
+  border: 1px solid #CBD5E1;
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* Silver Mirror Shine STRICTLY ON BORDER FRAME ONLY */
+/* Crisp Silver Specular Mirror Border Highlight */
 .leadership-card::before {
   content: '';
   position: absolute;
-  inset: -1.5px;
-  border-radius: 17.5px;
-  padding: 2px;
+  inset: -1px;
+  border-radius: 16.5px;
+  padding: 1.5px;
   background: linear-gradient(
-    120deg,
-    rgba(226, 232, 240, 0.2) 0%,
-    rgba(148, 163, 184, 0.4) 20%,
-    #FFFFFF 45%,
-    #E2E8F0 55%,
-    rgba(148, 163, 184, 0.4) 80%,
-    rgba(226, 232, 240, 0.2) 100%
+    135deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(148, 163, 184, 0.4) 25%,
+    #FFFFFF 50%,
+    rgba(148, 163, 184, 0.4) 75%,
+    rgba(255, 255, 255, 0) 100%
   );
-  background-size: 300% 300%;
+  background-size: 200% 200%;
   background-position: 0% 0%;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
-  transition: opacity 0.35s ease, background-position 0.75s ease-in-out;
+  transition: opacity 0.35s ease, background-position 0.65s ease-in-out;
   pointer-events: none;
   z-index: 2;
 }
 
 .leadership-card:hover {
-  transform: translateY(-5px);
-  border-color: transparent;
-  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.08), 
-              0 0 18px rgba(226, 232, 240, 0.65);
+  transform: translateY(-6px);
+  border-color: #64748B;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08), 
+              0 0 22px rgba(203, 213, 225, 0.85),
+              inset 0 1.5px 0 #FFFFFF,
+              inset 0 -1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .leadership-card:hover::before {
