@@ -223,7 +223,7 @@ img {
   cursor: pointer;
 }
 
-/* Hero Section (Using hero_img.png as specified) */
+/* Hero Section (Using hero img2.png) */
 .hero {
   position: relative;
   min-height: 88vh;
@@ -231,7 +231,7 @@ img {
   padding-bottom: 70px;
   display: flex;
   align-items: center;
-  background: var(--bg-light-main) url('../assets/hero_img.png') right center / cover no-repeat;
+  background: var(--bg-light-main) url('../assets/hero img2.png') right center / cover no-repeat;
   color: var(--text-dark);
 }
 
