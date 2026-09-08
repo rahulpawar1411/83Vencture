@@ -35,7 +35,7 @@
 
   /* Spacing */
   --container-max: 1200px;
-  --nav-height: 74px;
+  --nav-height: 86px;
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
@@ -175,11 +175,12 @@ img {
 }
 
 .brand-logo-img {
-  height: 48px;
-  max-height: 48px;
+  height: 64px;
+  max-height: 64px;
   width: auto;
   object-fit: contain;
   filter: none;
+  transition: height 0.3s ease;
 }
 
 .nav-menu {
@@ -1001,11 +1002,12 @@ img {
 
 @media (max-width: 768px) {
   :root {
-    --nav-height: 72px;
+    --nav-height: 78px;
   }
 
   .brand-logo-img {
-    height: 42px;
+    height: 52px;
+    max-height: 52px;
   }
 
   .nav-menu {
