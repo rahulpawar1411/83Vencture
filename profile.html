@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership Profile | Eighty Three Ventures</title>
+  <meta name="description" content="Detailed leadership profile and executive background for Eighty Three Ventures directors.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/83 logo (4).png">
+
+  <!-- Google Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .profile-page-wrapper {
+      padding-top: calc(var(--nav-height) + 40px);
+      padding-bottom: 80px;
+      min-height: 90vh;
+    }
+
+    .back-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      transition: color 0.2s ease;
+    }
+
+    .back-nav-btn:hover {
+      color: var(--text-dark);
+    }
+
+    .profile-hero-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+
+    .profile-avatar-wrap {
+      width: 100%;
+      height: 360px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+    }
+
+    .profile-avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-meta-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .profile-company-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-subtle);
+    }
+
+    .profile-name {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 6px;
+    }
+
+    .profile-title-role {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--gold-primary);
+      margin-bottom: 24px;
+    }
+
+    /* Social Media Linked Icons Bar */
+    .social-media-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .social-icon-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #F1F5F9;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0F172A;
+      transition: all 0.25s ease;
+    }
+
+    .social-icon-btn:hover {
+      background: #0C1E23;
+      color: #FFFFFF;
+      border-color: #0C1E23;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(12, 30, 35, 0.2);
+    }
+
+    .social-icon-btn.linkedin:hover {
+      background: #0A66C2;
+      border-color: #0A66C2;
+    }
+
+    .social-icon-btn.twitter:hover {
+      background: #000000;
+      border-color: #000000;
+    }
+
+    .social-icon-btn.email:hover {
+      background: #EA4335;
+      border-color: #EA4335;
+    }
+
+    .profile-quick-bio {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    .profile-details-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+    }
+
+    .profile-section-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 32px;
+    }
+
+    .profile-section-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .profile-paragraph {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .focus-area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .focus-tag-chip {
+      background: #F1F5F9;
+      color: #0F172A;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 100px;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .achievement-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .achievement-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .achievement-bullet {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      border-radius: 50%;
+      background: rgba(197, 155, 39, 0.15);
+      color: var(--gold-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.8rem;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 992px) {
+      .profile-hero-card {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .profile-avatar-wrap {
+        height: 320px;
+      }
+      .profile-details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="index.html#home" class="brand-logo" id="brandLogo">
+        <img src="assets/83 logo (4).png" alt="Eighty Three Ventures" class="brand-logo-img">
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#home" class="nav-link" data-text="Home"><span>Home</span></a></li>
+          <li><a href="index.html#about" class="nav-link" data-text="About Us"><span>About Us</span></a></li>
+          <li><a href="index.html#what-we-do" class="nav-link" data-text="What We Do"><span>What We Do</span></a></li>
+          <li><a href="index.html#leadership" class="nav-link active" data-text="Leadership"><span>Leadership</span></a></li>
+          <li><a href="index.html#portfolio" class="nav-link" data-text="Businesses"><span>Businesses</span></a></li>
+          <li><a href="index.html#media" class="nav-link" data-text="Media"><span>Media</span></a></li>
+          <li><a href="index.html#contact" class="nav-link" data-text="Contact"><span>Contact</span></a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="index.html#contact" class="btn btn-navy" id="headerPartnerBtn">
+          <span class="btn-text" data-text="Partner With Us >"><span>Partner With Us &gt;</span></span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- Main Profile Page Body -->
+  <main class="profile-page-wrapper">
+    <div class="container">
+      
+      <a href="index.html#leadership" class="back-nav-btn">
+        <span>← Back to Leadership Team</span>
+      </a>
+
+      <!-- Profile Header Hero Card -->
+      <div class="profile-hero-card">
+        <div class="profile-avatar-wrap">
+          <img id="profileImage" src="assets/person1.jpg" alt="Leadership Profile" class="profile-avatar-img">
+        </div>
+
+        <div class="profile-header-info">
+          <div class="profile-meta-top">
+            <span class="profile-company-tag">Eighty Three Ventures</span>
+            <span class="pill-badge" style="background: rgba(12, 30, 35, 0.06); color: #0C1E23; font-weight: 700;">Director Profile</span>
+          </div>
+
+          <h1 class="profile-name" id="profileName">Rahul Sharma</h1>
+          <div class="profile-title-role" id="profileRole">Founder &amp; Director</div>
+
+          <!-- Social Media Linked Icons -->
+          <div class="social-media-bar">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn linkedin" title="LinkedIn Profile" id="linkLinkedin">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.6 1.6 0 1 0 1.6 1.6 1.6 1.6 0 0 0-1.6-1.6Z"/></svg>
+            </a>
+
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn twitter" title="Twitter / X Profile" id="linkTwitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+
+            <a href="mailto:info@83ventures.in" class="social-icon-btn email" title="Email Executive Office" id="linkEmail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+
+            <a href="https://83ventures.in" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Corporate Platform" id="linkWebsite">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </a>
+          </div>
+
+          <p class="profile-quick-bio" id="profileBio">
+            Vision-driven entrepreneur with extensive experience in strategic capital deployment, multi-sector operational scaling, and building long-term business partnerships across logistics, technology, and consumer staples.
+          </p>
+
+          <a href="mailto:info@83ventures.in" class="btn btn-navy">
+            <span class="btn-text" data-text="Connect With Executive >"><span>Connect With Executive &gt;</span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Detailed Biography & Focus Areas Section -->
+      <div class="profile-details-grid">
+        <div>
+          <div class="profile-section-card">
+            <h3 class="profile-section-title">Executive Biography</h3>
+            <div id="profileFullBio">
+              <p class="profile-paragraph">
+                As Founder and Director of Eighty Three Ventures, Rahul Sharma leads strategic investment initiatives, corporate governance, and ecosystem development for portfolio ventures. With over 15 years of active business building experience, he partners with high-potential founders to solve complex operational challenges and scale sustainable businesses.
+              </p>
+              <p class="profile-paragraph">
+                Prior to founding Eighty Three Ventures, Rahul held key executive leadership roles across logistics, supply-chain platforms, and early-stage enterprise ventures, driving multi-million rupee revenue growth and expanding operating networks across India.
+              </p>
+            </div>
+          </div>
+
+          <div class="profile-section-card">
+            <h3 class="profile-section-title">Core Strategic Focus</h3>
+            <div class="focus-area-tags" id="profileFocusTags">
+              <span class="focus-tag-chip">Corporate Strategy</span>
+              <span class="focus-tag-chip">Venture Capital &amp; Investments</span>
+              <span class="focus-tag-chip">Supply Chain &amp; Logistics</span>
+              <span class="focus-tag-chip">Operational Excellence</span>
+              <span class="focus-tag-chip">Strategic Partnerships</span>
+              <span class="focus-tag-chip">Scaling 0-to-1 Platforms</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="profile-section-card">
+            <h3 class="profile-section-title">Key Highlights</h3>
+            <ul class="achievement-list" id="profileHighlights">
+              <li class="achievement-item">
+                <span class="achievement-bullet">✓</span>
+                <div>Founding partner overseeing portfolio expansion across Cold Chain Tech &amp; FoodTech.</div>
+              </li>
+              <li class="achievement-item">
+                <span class="achievement-bullet">✓</span>
+                <div>Spearheaded multi-million pre-seed capital raises and institutional partnerships.</div>
+              </li>
+              <li class="achievement-item">
+                <span class="achievement-bullet">✓</span>
+                <div>Board advisory member across technology-enabled enterprise supply chains.</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="profile-section-card" style="background: var(--navy-btn); color: #FFFFFF;">
+            <h3 class="profile-section-title" style="color: #FFFFFF; border-color: rgba(255,255,255,0.15);">Direct Contact</h3>
+            <p style="font-size: 0.9rem; color: #CBD5E1; margin-bottom: 20px;">
+              For strategic partnerships, co-investments, or executive inquiries, reach out directly to our corporate office.
+            </p>
+            <a href="mailto:info@83ventures.in" class="btn btn-gold" style="width: 100%;">
+              <span class="btn-text" data-text="Send Direct Inquiry >"><span>Send Direct Inquiry &gt;</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom-line" style="border-top: none; padding-top: 0;">
+        <div>© 2026 Eighty Three Ventures Private Limited. All Rights Reserved. Thane, Maharashtra, India.</div>
+        <div>
+          <a href="index.html#home" style="color: var(--text-subtle);">Return to Main Website</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Profile Data Hydration Script based on URL query parameter ?id=...
+    const profiles = {
+      'rahul-sharma': {
+        name: 'Rahul Sharma',
+        role: 'Founder & Director',
+        image: 'assets/person1.jpg',
+        bio: 'Vision-driven entrepreneur with extensive experience in strategic capital deployment, multi-sector operational scaling, and building long-term business partnerships across logistics, technology, and consumer staples.',
+        fullBio: `
+          <p class="profile-paragraph">As Founder and Director of Eighty Three Ventures, Rahul Sharma leads strategic investment initiatives, corporate governance, and ecosystem development for portfolio ventures. With over 15 years of active business building experience, he partners with high-potential founders to solve complex operational challenges and scale sustainable businesses.</p>
+          <p class="profile-paragraph">Prior to founding Eighty Three Ventures, Rahul held key executive leadership roles across logistics, supply-chain platforms, and early-stage enterprise ventures, driving multi-million rupee revenue growth and expanding operating networks across India.</p>
+        `,
+        tags: ['Corporate Strategy', 'Venture Capital', 'Supply Chain & Logistics', 'Operational Excellence', 'Strategic Partnerships'],
+        highlights: [
+          'Founding partner overseeing portfolio expansion across Cold Chain Tech & FoodTech.',
+          'Spearheaded multi-million pre-seed capital raises and institutional partnerships.',
+          'Board advisory member across technology-enabled enterprise supply chains.'
+        ],
+        linkedin: 'https://linkedin.com/in/rahulsharma',
+        twitter: 'https://twitter.com/rahulsharma',
+        email: 'mailto:rahul@83ventures.in'
+      },
+      'neha-kapoor': {
+        name: 'Neha Kapoor',
+        role: 'Co-Founder & Partner',
+        image: 'assets/person2.jpg',
+        bio: 'Leads business development, strategic alliances, brand positioning, and ecosystem partnerships across all Eighty Three Ventures portfolio companies.',
+        fullBio: `
+          <p class="profile-paragraph">Neha Kapoor serves as Co-Founder and Partner at Eighty Three Ventures, bringing deep expertise in corporate strategy, brand scaling, and international market development. She leads strategic alliances and market expansion initiatives across portfolio investments.</p>
+          <p class="profile-paragraph">Her background spans over a decade of strategic consulting and venture execution, working closely with high-growth startups and established brands to build market leadership and scale distribution channels.</p>
+        `,
+        tags: ['Business Development', 'Brand Strategy', 'Strategic Partnerships', 'Market Expansion', 'Growth Operations'],
+        highlights: [
+          'Established key enterprise partnerships with national retail and tech platforms.',
+          'Drives brand strategy and go-to-market execution across consumer portfolio ventures.',
+          'Active advisor to female entrepreneurs and early-stage founders.'
+        ],
+        linkedin: 'https://linkedin.com/in/nehakapoor',
+        twitter: 'https://twitter.com/nehakapoor',
+        email: 'mailto:neha@83ventures.in'
+      },
+      'rohan-mehta': {
+        name: 'Rohan Mehta',
+        role: 'Director',
+        image: 'assets/person3.jpg',
+        bio: 'Brings comprehensive expertise in corporate finance, investment governance, legal structuring, and long-term enterprise value creation.',
+        fullBio: `
+          <p class="profile-paragraph">Rohan Mehta is a Director at Eighty Three Ventures, specializing in corporate finance, financial structuring, risk governance, and portfolio company scaling. He works directly with portfolio finance teams to establish robust financial controls and unit economics.</p>
+          <p class="profile-paragraph">With a background in corporate finance and M&A advisory, Rohan has evaluated and structured numerous growth transactions, equity investments, and strategic joint ventures across India's emerging sectors.</p>
+        `,
+        tags: ['Corporate Finance', 'Investment Governance', 'Financial Structuring', 'Unit Economics', 'M&A Advisory'],
+        highlights: [
+          'Manages financial governance and risk compliance for all platform investments.',
+          'Structured growth rounds and unit-economics optimization for portfolio companies.',
+          'Experienced corporate finance strategist with deep capital markets insight.'
+        ],
+        linkedin: 'https://linkedin.com/in/rohanmehta',
+        twitter: 'https://twitter.com/rohanmehta',
+        email: 'mailto:rohan@83ventures.in'
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const profileId = params.get('id') || 'rahul-sharma';
+      const data = profiles[profileId] || profiles['rahul-sharma'];
+
+      document.getElementById('profileName').innerText = data.name;
+      document.getElementById('profileRole').innerText = data.role;
+      document.getElementById('profileImage').src = data.image;
+      document.getElementById('profileBio').innerText = data.bio;
+      document.getElementById('profileFullBio').innerHTML = data.fullBio;
+      document.title = `${data.name} - ${data.role} | Eighty Three Ventures`;
+
+      // Update social links
+      if (data.linkedin) document.getElementById('linkLinkedin').href = data.linkedin;
+      if (data.twitter) document.getElementById('linkTwitter').href = data.twitter;
+      if (data.email) document.getElementById('linkEmail').href = data.email;
+
+      // Update tags
+      const tagsContainer = document.getElementById('profileFocusTags');
+      tagsContainer.innerHTML = data.tags.map(tag => `<span class="focus-tag-chip">${tag}</span>`).join('');
+
+      // Update highlights
+      const highlightsContainer = document.getElementById('profileHighlights');
+      highlightsContainer.innerHTML = data.highlights.map(h => `
+        <li class="achievement-item">
+          <span class="achievement-bullet">✓</span>
+          <div>${h}</div>
+        </li>
+      `).join('');
+    });
+  </script>
+</body>
+</html>
