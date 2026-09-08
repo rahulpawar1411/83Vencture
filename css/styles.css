@@ -6,8 +6,8 @@
 
 :root {
   /* Color Tokens matching design2.png */
-  --bg-light-main: #F9FAFC;
-  --bg-slate-section: #F3F5F9;
+  --bg-light-main: #FDFBF7;
+  --bg-slate-section: #F5F2EA;
   --bg-card-white: #FFFFFF;
   --bg-navy-dark: #0C1E23;
   --bg-navy-card: #0A171B;
@@ -208,14 +208,14 @@ img {
   width: 100%;
   height: var(--nav-height);
   z-index: 1000;
-  background: rgba(249, 250, 252, 0.92);
+  background: rgba(253, 251, 247, 0.94);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-light);
   transition: all 0.3s ease;
 }
 
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(253, 251, 247, 0.98);
   box-shadow: var(--shadow-sm);
 }
 
@@ -1314,7 +1314,7 @@ body.menu-open {
     min-height: auto;
     padding-top: calc(var(--nav-height) + 32px);
     padding-bottom: 54px;
-    background: linear-gradient(180deg, rgba(249, 250, 252, 0.92) 0%, rgba(249, 250, 252, 0.98) 100%),
+    background: linear-gradient(180deg, rgba(253, 251, 247, 0.92) 0%, rgba(253, 251, 247, 0.98) 100%),
                 url('../assets/hero img2.png') center / cover no-repeat;
   }
 
